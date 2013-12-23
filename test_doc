@@ -1,0 +1,209 @@
+!*************************************************************************!
+!*    DOCUMENT NUMBER 193 30-IPB 356 IPB 356 1075/1                      *!
+!*************************************************************************!
+!*                  BASED ON IE-Select VERSION 4.3       (G12A)          *!
+!*************************************************************************!
+!*         HW DT RELEASE                                                 *!
+!*************************************************************************!
+!*                                                                       *!
+!* CUSTOMER    :  Bharti                                                 *!
+!* NODETYPE    :  RBSC                                                   *!
+!* SITENAME    :  RBSC1, Itanagar NE                                     *!
+!* IPB         :  IPB 356 1075/1                                         *!
+!* ----------------------------------------------------------------------*!
+!* DATE        :  31-10-2013                                             *!
+!* REV         :  R10A                                                    *!
+!* APZ Type    :  APZ 21233C                                             *!
+!* APG Type    :  APG40                                                  *!
+!* SW Rev      :  G12A                                                   *!
+!* ----------------------------------------------------------------------*!
+!* PREPARED BY :  Garima Saxena                                          *!
+!* E-MAIL      :  garima.saxena@ericsson.com                             *!
+!*************************************************************************!
+
+!***********************************************************************************************************************!
+!*****  SIZE ALTERATION EVENT *****                                                                                     !
+!***********************************************************************************************************************!
+
+!SAAII:SAE=807, BLOCK=RPDI, NI=	2196	;
+!SAAII:SAE=304, NI=524	;
+!SAAII:SAE=1822, NI=768	;
+!SAAII:SAE=1850,NI=8384;
+
+
+SAAII:SAE=500, BLOCK=RTGPHDV, NI=43;
+SAAII:SAE=501, BLOCK=RTGPHDV, NI=22016;
+
+
+
+!***********************************************************************************************************************!
+!***** HARDWARE LAYOUT *****                                                                                            !
+!***********************************************************************************************************************!
+
+DBTRI;
+DBTSI:TAB=RPSRPBSPOS,   RPADDR=523,  BRNO=16,  MAGNO=0,  SLOTNO=18,  BUSCONN=NO;
+
+DBTRE:COM;
+
+!***********************************************************************************************************************!
+!***** ALLOCATION OF RP *****                                                                                           !
+!***********************************************************************************************************************!
+
+
+EXRPI:RP=523,  TYPE=GARP2A;
+
+EXRUI:RP=523,  SUID="9000/CXC 146 179       R5D01";     !GPEX2R!
+EXRUI:RP=523,  SUID="9000/CXC 146 591       R4A06";     !INETR!
+EXRUI:RP=523,  SUID="9000/CXC 146 05 R1A03";     !RPFDR!
+EXRUI:RP=523,  SUID="9000/CXC 146 03 R1A08";     !RPIFDR!
+EXRUI:RP=523,  SUID="7/CXC 146 1484/2000 R1A01";     !RCCBCR!
+EXRUI:RP=523,  SUID="7/CXC 146 1471/2600    R6A01";     !RGCNTR!
+EXRUI:RP=523,  SUID="7/CXC 146 1472/2600    R7A01";     !RGCONR!
+EXRUI:RP=523,  SUID="7/CXC 146 1473/2600    R6A01";     !RGMACR!
+EXRUI:RP=523,  SUID="7/CXC 146 1474/2000    R3A01";     !RGNCCR!
+EXRUI:RP=523,  SUID="7/CXC 146 1475/2600    R3A01";     !RGRLCR!
+EXRUI:RP=523,  SUID="7/CXC 146 1466/2600    R4A01";     !RGSERVR!
+EXRUI:RP=523,  SUID="7/CXC 146 1467/2000    R1B01";     !ROFWR!
+EXRUI:RP=523,  SUID="7/CXC 146 1460/2600    R3A01";     !RTGBIPR!
+EXRUI:RP=523,  SUID="7/CXC 146 1459/2600    R3A01";     !RTGBR!
+EXRUI:RP=523,  SUID="7/CXC 146 1480/2000 R1A01";     !RTGPHDVR!
+EXRUI:RP=523,  SUID="9000/CXC 146 48 R1C02";     !SFRAMER!
+EXRUI:RP=523,  SUID="7/CXC 146 1461/2000    R1B01";     !RTIPGPHR!
+
+!***********************************************************************************************************************!
+!***** ALLOCATION OF EM *****                                                                                           !
+!***********************************************************************************************************************!
+
+EXEMI:EQM=RGSERV-42,   RP=523,  EM=0,   SUID="7/CXC 146 1466/2600    R4A01";
+EXEMI:EQM=RTGB-42,     RP=523,  EM=1,   SUID="7/CXC 146 1459/2600    R3A01";
+EXEMI:EQM=RTGPHDV-42,  RP=523,  EM=2,   SUID="7/CXC 146 1480/2000 R1A01";
+EXEMI:EQM=RGRLC-42,    RP=523,  EM=3,   SUID="7/CXC 146 1475/2600    R3A01";
+EXEMI:EQM=RGMAC-42,    RP=523,  EM=4,   SUID="7/CXC 146 1473/2600    R6A01";
+EXEMI:EQM=RGCON-42,    RP=523,  EM=5,   SUID="7/CXC 146 1472/2600    R7A01";
+EXEMI:EQM=RGCNT-42,    RP=523,  EM=7,   SUID="7/CXC 146 1471/2600    R6A01";
+EXEMI:EQM=RTIPGPH-42,  RP=523,  EM=8,   SUID="7/CXC 146 1461/2000    R1B01";
+EXEMI:EQM=RTGBIP-42,   RP=523,  EM=9,   SUID="7/CXC 146 1460/2600    R3A01";
+EXEMI:EQM=RGNCC-42,    RP=523,  EM=10,  SUID="7/CXC 146 1474/2000    R3A01";
+EXEMI:EQM=RCCBC-42,    RP=523,  EM=11,  SUID="7/CXC 146 1484/2000 R1A01";
+EXEMI:EQM=ROFW-42,     RP=523,  EM=15,  SUID="7/CXC 146 1467/2000    R1B01";
+
+!***********************************************************************************************************************!
+!***** SNT ALLOCATION *****                                                                                             !
+!***********************************************************************************************************************!
+
+
+NTCOI:SNT=RTSNT34-42,  SNTV=2,  MODE=512,  SNTP=XM-0-2-16;
+
+
+EXDUI:DEV=RTGPHDV-21504&&-21535,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21536&&-21567,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21568&&-21599,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21600&&-21631,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21632&&-21663,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21664&&-21695,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21696&&-21727,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21728&&-21759,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21760&&-21791,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21792&&-21823,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21824&&-21855,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21856&&-21887,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21888&&-21919,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21920&&-21951,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21952&&-21983,  SNT=RTSNT34-42,  SNTINL=0;
+EXDUI:DEV=RTGPHDV-21984&&-22015,  SNT=RTSNT34-42,  SNTINL=0;
+
+!***********************************************************************************************************************!
+!***** SNT ALLOCATION *****                                                                                             !
+!***********************************************************************************************************************!
+
+
+EXPOI:RP=523,                            POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=0,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=1,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=2,   POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21504&&-21535,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21536&&-21567,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21568&&-21599,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21600&&-21631,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21632&&-21663,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21664&&-21695,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21696&&-21727,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21728&&-21759,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21760&&-21791,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21792&&-21823,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21824&&-21855,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21856&&-21887,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21888&&-21919,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21920&&-21951,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21952&&-21983,         POS=RBSC1-11-36-03-59;
+EXPOI:DEV=RTGPHDV-21984&&-22015,         POS=RBSC1-11-36-03-59;
+EXPOI:SNT=RTSNT34-42,                    POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=3,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=4,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=5,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=7,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=8,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=9,   POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=10,  POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=11,  POS=RBSC1-11-36-03-59;
+EXPOI:RP=523,                    EM=15,  POS=RBSC1-11-36-03-59;
+
+!***********************************************************************************************************************!
+!***** PRE-POST SERVICE STATE *****                                                                                     !
+!***********************************************************************************************************************!
+
+
+EXDAI:DEV=RTGPHDV-21504&&-21535;
+EXDAI:DEV=RTGPHDV-21536&&-21567;
+EXDAI:DEV=RTGPHDV-21568&&-21599;
+EXDAI:DEV=RTGPHDV-21600&&-21631;
+EXDAI:DEV=RTGPHDV-21632&&-21663;
+EXDAI:DEV=RTGPHDV-21664&&-21695;
+EXDAI:DEV=RTGPHDV-21696&&-21727;
+EXDAI:DEV=RTGPHDV-21728&&-21759;
+EXDAI:DEV=RTGPHDV-21760&&-21791;
+EXDAI:DEV=RTGPHDV-21792&&-21823;
+EXDAI:DEV=RTGPHDV-21824&&-21855;
+EXDAI:DEV=RTGPHDV-21856&&-21887;
+EXDAI:DEV=RTGPHDV-21888&&-21919;
+EXDAI:DEV=RTGPHDV-21920&&-21951;
+EXDAI:DEV=RTGPHDV-21952&&-21983;
+EXDAI:DEV=RTGPHDV-21984&&-22015;
+
+!***********************************************************************************************************************!
+!***** DEBLOCKING OF RP AND EM *****                                                                                    !
+!***********************************************************************************************************************!
+
+BLRPE:RP=523;     !GARP2A!
+
+!***********************************************************************************************************************!
+!***** DEBLOCKING OF SNT *****                                                                                          !
+!***********************************************************************************************************************!
+
+
+NTBLE:SNT=RTSNT34-42;
+
+!***********************************************************************************************************************!
+!***** SIGNALLING AND TRAFFIC CONNECTIONS *****                                                                         !
+!***********************************************************************************************************************!
+
+
+BLODE:DEV=RTGPHDV-21504&&-21535;
+BLODE:DEV=RTGPHDV-21536&&-21567;
+BLODE:DEV=RTGPHDV-21568&&-21599;
+BLODE:DEV=RTGPHDV-21600&&-21631;
+BLODE:DEV=RTGPHDV-21632&&-21663;
+BLODE:DEV=RTGPHDV-21664&&-21695;
+BLODE:DEV=RTGPHDV-21696&&-21727;
+BLODE:DEV=RTGPHDV-21728&&-21759;
+BLODE:DEV=RTGPHDV-21760&&-21791;
+BLODE:DEV=RTGPHDV-21792&&-21823;
+BLODE:DEV=RTGPHDV-21824&&-21855;
+BLODE:DEV=RTGPHDV-21856&&-21887;
+BLODE:DEV=RTGPHDV-21888&&-21919;
+BLODE:DEV=RTGPHDV-21920&&-21951;
+BLODE:DEV=RTGPHDV-21952&&-21983;
+BLODE:DEV=RTGPHDV-21984&&-22015;
+
+
+
